@@ -4,6 +4,7 @@
  */
 
 var express = require('express')
+  , coffee = require('coffee-script')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
