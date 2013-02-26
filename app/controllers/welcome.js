@@ -11,6 +11,10 @@ module.exports = function(app) {
   	var html = path.normalize(__dirname + '/../../public/index.html');
     response.sendfile(html);
   });
+  app.post('/', function(request, response) {
+    var html = path.normalize(__dirname + '/../../public/index.html');
+    response.sendfile(html);
+  });
 
 };
 
