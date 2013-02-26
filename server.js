@@ -19,16 +19,16 @@ var MONGO_DB = process.env.MONGO_DB || 'mongodb://localhost/test';
 /**
  * connect to mongodb
  */
+ 
+// mongoose.connect(MONGO_DB);
 
-mongoose.connect(MONGO_DB);
+// mongoose.connection.on('open', function(){
+//   angular.log('success', 'mongodb connected');
+// });
 
-mongoose.connection.on('open', function(){
-  angular.log('success', 'mongodb connected');
-});
-
-mongoose.connection.on('error', function(error){
-	angular.error('error', error.message);
-});
+// mongoose.connection.on('error', function(error){
+// 	angular.error('error', error.message);
+// });
 
 /**
  * configure express
