@@ -9,7 +9,7 @@ var express = require('express')
   , coffee = require('coffee-script')
   , app = express.createServer()
   ;
-  
+
 /**
  * configure mongodb
  */
@@ -57,11 +57,15 @@ angular.load('controllers', '/app/controllers/', app);
 /**
  * http.Server.listen()
  */
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+  angular.log('title', 'listening on port ' + port);
+});
 
 exports.listen = function(port) {
-  app.listen(port, function() {
-    angular.log('title', 'listening on port ' + port);
-  });
+  // app.listen(port, function() {
+  //   angular.log('title', 'listening on port ' + port);
+  // });
 };
 
 /* EOF */
