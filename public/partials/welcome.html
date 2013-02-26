@@ -1,0 +1,5 @@
+<div class="container" ng-init="$root.pageTitle = pageHeader">
+  <h1 ng-bind="pageHeader"></h1>
+  <p>India time: <live-clock offset="5.5"></live-clock></p>
+  <google-map center="center" draggable="true" zoom="zoom" markers="markers" mark-click="true" style="height: 400px"></google-map>
+</div>
