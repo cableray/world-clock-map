@@ -1,11 +1,19 @@
 path = require 'path'
-stitch= require 'stitch'
+coffee_connect= require 'connect-coffee-script'
 
-js_package= stitch.createPackage(
-  paths : [path.normalize(__dirname + '/../../public/javascripts/')]
-)
+js_options= {
+  src:path.normalize(__dirname + '/../../assets/js/'),
+  dest:path.normalize(__dirname + '/../../public/javascripts/'),
+}
+
+css_options= {
+  src:path.normalize(__dirname + '/../../assets/stylesheets/'),
+  dest:path.normalize(__dirname + '/../../public/stylesheets/'),
+}
 
 module.exports = (app)->
 
-  app.get '/application.js', js_package.createServer()
+  app.use coffee_connect(js_options)
+  app.use require('less-middleware')(css_options)
+  
 

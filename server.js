@@ -7,7 +7,8 @@ var express = require('express')
   , angular = new require('angular')
   , mongoose = require('mongoose')
   , coffee = require('coffee-script')
-  , app = express.createServer();
+  , app = express.createServer()
+  ;
   
 /**
  * configure mongodb

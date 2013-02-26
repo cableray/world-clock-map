@@ -2,12 +2,16 @@
 <html lang="en" ng-app="app">
   <head>
     <meta charset="utf-8">
-    <title ng-bind-template="Node-Angular {{pageTitle}}">Node-Angular</title>
+    <title ng-bind-template="India Trip 2013 :: {{pageTitle}}">Node-Angular</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/welcome.css">
   </head>
   <body>
     <div>
       <ng-view></ng-view>
     </div>
-    <script type="text/javascript" src="application.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
+    <script type="text/javascript" src="javascripts/vendor/angular-1.0.1.min.js"></script>
+    <script type="text/javascript" src="javascripts/vendor/angular-google-maps.js"></script>
+    <script type="text/javascript" src="javascripts/app.js"></script>
   </body>
 </html>

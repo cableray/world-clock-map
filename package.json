@@ -10,7 +10,9 @@
     "colors":"0.6.0-1",
     "angular":"",
     "coffee-script":"*",
+    "connect-coffee-script":"*",
     "less":"*",
+    "less-middleware":"*",
     "stitch":"*"
   },
   "devDependencies":{
